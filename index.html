@@ -1,0 +1,276 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
+
+<style type="text/css">
+::-webkit-scrollbar {width: 3px; height: 3px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #CCCCCC;}
+ 
+body {
+  background-image: url('https://i.imgur.com/HXwCAXo.gif')!important;
+  background-repeat: repeat!important;
+  background-attachment: fixed!important;
+  background-position: center!important;
+}
+
+#box:hover, #box1:hover, .box2:hover, .box3:hover {
+ -webkit-box-shadow: 0px 0px 15px 10px rgba(212,224,237,0.75);
+  box-shadow: 0px 0px 15px 10px rgba(212,224,237,0.75);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+#box {
+  background-color: rgba(30, 30, 30, 0.8);
+  position: absolute;
+  width: 20%;
+  height: 60%;
+  top: 25%;
+  left: 55%;
+  border: 1px solid #999999;
+  -webkit-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -moz-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+ 
+#box1 {
+  overflow: auto;
+  background-color: rgba(30, 30, 30, 0.8);
+  position: absolute;
+  width: 20%;
+  height: 59%;
+  top: 25%;
+  left: 33.3%;
+  padding:5px;
+  text-align: left;
+  font-family: calibri;
+  font-size: 80%;
+  color: #ffffff;
+  border: 1px solid #999999;
+  -webkit-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -moz-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+ 
+.box2 {
+  background-color: rgba(30, 30, 30, 0.8);
+  position: absolute;
+  width: 7%;
+  height: 60.5%;
+  top: 25%;
+  left: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #999999;
+  -webkit-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -moz-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+ 
+.box3 {
+  background-color: rgba(30, 30, 30, 0.8);
+  position: absolute;
+  width: 50%;
+  height: 9%;
+  top: 13%;
+  left: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: Amita;
+  font-size: 220%;
+  letter-spacing:5px;
+  color: #ffffff;
+  border: 1px solid #999999;
+  -webkit-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -moz-box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  box-shadow: 0px 0px 14px 1px rgba(204,204,204,1);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+#moonbox {
+  position:absolute;
+  background-image: url('https://i.imgur.com/fdAjmUS.gif')!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  background-size: cover!important;
+  width:20%;
+  height:40%;
+  top:30%;
+  left:2%;
+}
+
+#planetbox {
+  position:absolute;
+  background-image: url('https://i.imgur.com/OM0nUxB.gif')!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  background-size: cover!important;
+  width:20%;
+  height:40%;
+  top:30%;
+  left:78%;
+}
+
+#box1 b, strong {color: #999999;}
+#box1 i,em {color: #FFFCC4;}
+#box1 a {color: #999999;}
+#box1 a:hover { color: #CCCCCC; }
+
+p {
+  border-bottom: 1px solid #999999;
+  padding: 5px;
+  font-family:Amita;
+  font-size:15px;
+}
+
+.tabs{
+border: 1px;
+display:block;
+width:86%;
+height: 7%;
+margin-left: 6%;
+margin-top: 19%;
+border:1px solid #999999;
+text-align:center;
+font-size: 120%;
+color: #ffffff;
+background-color:none;
+font-family: Amita;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+background:rgba(255, 252, 196, 0.75);
+color: #333333;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10,#tab11,#tab12,#tab13,#tab14,#tab15,#tab16 {
+display:none;
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Amita" rel="stylesheet">
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur816.cur), progress !important;}</style>
+<script>function changeNavigation(id) {document.getElementById('box1').innerHTML=document.getElementById(id).innerHTML}</script><script>function changeNavigation1(id) {document.getElementById('box').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="box">
+<img style="height:100%;width:100%;" src="https://i.imgur.com/sY9k933.jpg"/>
+</div>
+
+<div id="moonbox">
+</div>
+
+<div id="planetbox">
+</div>
+
+<div id="box1">
+<p align="center">Basic Information</p>
+<b>Name:</b><br>Crescent of the Full Moon<br><br>
+<b>Alias:</b><br>Crescent<br><br>
+<b>Physical Age:</b><br>Late Twenties to Early Thirties<br><br>
+<b>Gender:</b><br>Female<br><br>
+<b>Sexuality:</b><br>Demisexual<br><br>
+<b>Species:</b><br>Ethereal Entity<br><br>
+<b>Race:</b><br>Moonborn<br><br>
+<b>Occupation:</b><br>Ruler of the Night Clan<br><br>
+<b>Height:</b><br>6'0"<br><br>
+<b>Weight:</b><br>140 lbs.
+</div>
+
+<div class="box2">
+<span class="tabs" onClick="changeNavigation ('tab1');changeNavigation1 ('tab9')">Details</span>
+
+<span class="tabs" onClick="changeNavigation ('tab2');changeNavigation1 ('tab10')">Lore</span>
+
+<span class="tabs" onClick="changeNavigation ('tab3');changeNavigation1 ('tab11')">History</span>
+
+<span class="tabs" onClick="changeNavigation ('tab4');changeNavigation1 ('tab12')">Culture</span>
+
+<span class="tabs" onClick="changeNavigation ('tab5');changeNavigation1 ('tab13')">Racials</span>
+
+<span class="tabs" onClick="changeNavigation ('tab6');changeNavigation1 ('tab14')">Magic</span>
+
+<span class="tabs" onClick="changeNavigation ('tab7');changeNavigation1 ('tab15')">Phoenix</span>
+
+<span class="tabs" onClick="changeNavigation ('tab8');changeNavigation1 ('tab16')">North</span>
+</div>
+
+<div class="box3">
+Queen of the Night Clan
+</div>
+
+<div id="tab1">
+<p align="center">Detailed Information</p>
+</div>
+
+<div id="tab2">
+<p align="center">Moonborn Creation</p>
+</div>
+
+<div id="tab3">
+<p align="center">Night Clan History</p>
+</div>
+
+<div id="tab4">
+<p align="center">Night Clan Culture</p>
+</div>
+
+<div id="tab5">
+<p align="center">Racials of a Moonborn</p>
+</div>
+
+<div id="tab6">
+<p align="center">Crescent's Magical Affinities</p>
+</div>
+
+<div id="tab7">
+<p align="center">The Brightest Star</p>
+</div>
+
+<div id="tab8">
+<p align="center">Project Eclipse</p>
+</div>
+
+<div id="tab9">
+<img style="width:100%;margin-top:10%;" src="https://i.imgur.com/6SUBBUl.png"/>
+</div>
+
+<div id="tab10">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/dkg93oE.jpg"/>
+</div>
+
+<div id="tab11">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/eNsyVac.jpg"/>
+</div>
+
+<div id="tab12">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/Hf2BdOC.jpg"/>
+</div>
+
+<div id="tab13">
+<img style="width:100%;margin-top:10%;" src="https://i.imgur.com/NSKcsJK.png"/>
+</div>
+
+<div id="tab14">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/MriPOJa.png"/>
+</div>
+
+<div id="tab15">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/yt8TlhZ.jpg"/>
+</div>
+
+<div id="tab16">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/kEzkpem.png"/>
+</div>
